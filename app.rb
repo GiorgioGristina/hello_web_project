@@ -19,5 +19,11 @@ class Application < Sinatra::Base
     message = params[:message]
 
     return "Thanks #{name}, you sent this message: #{message}"
-  end      
+  end   
+  
+  get '/names' do
+   
+    names = ['Julia', 'Mary', 'Karim']
+    return names.join(', ')
+  end
 end
